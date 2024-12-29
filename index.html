@@ -128,10 +128,10 @@
         <select id="calorieGoal" required>
             <option value="" disabled selected>Bitte wählen</option>
             <option value="1">Gewicht halten (100%)</option>
-            <option value="0.8">Gewichtsabnahme - Moderates Defizit (80%)</option>
+            <option value="0.8">Gewichtsabnahme / Body Recomposition - Moderates Defizit (80%)</option>
             <option value="0.75">Gewichtsabnahme - Mittleres Defizit (75%)</option>
             <option value="0.7">Gewichtsabnahme - Hohes Defizit (70%)</option>
-            <option value="1.05">Body Recomposition (105%)</option>
+            <option value="1.05">Langsamer Muskelaufbau (105%)</option>
             <option value="1.1">Muskelaufbau (110%)</option>
         </select>
 
@@ -170,7 +170,7 @@
         function getGoalDescription(goal) {
             switch (goal) {
                 case 1: return "Gewicht halten";
-                case 0.8: return "Gewichtsabnahme - Body Recomposition - Moderates Defizit (80%)";
+                case 0.8: return "Gewichtsabnahme / Body Recomposition - Moderates Defizit (80%)";
                 case 0.75: return "Gewichtsabnahme - Mittleres Defizit (75%)";
                 case 0.7: return "Gewichtsabnahme - Hohes Defizit (70%)";
                 case 1.05: return "Langsamer Muskelaufbau (105%)";
