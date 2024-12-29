@@ -74,15 +74,21 @@
             background-color: #ffca2c;
         }
 
-        /* Ergebnisse und Fehler */
+        /* Ergebnisse */
         .result {
             font-weight: bold;
-            color: #8c2fc2; /* Lila Schriftfarbe */
+            color: #333; /* Dunkler Text für bessere Lesbarkeit */
             text-align: center;
             margin-top: 20px;
             font-size: 1.2rem;
+            background-color: rgba(255, 193, 7, 0.8); /* Gelber Hintergrund mit Transparenz */
+            padding: 10px;
+            border-radius: 10px; /* Runde Ecken */
+            display: inline-block;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Leichter Schatten */
         }
 
+        /* Fehler */
         .error {
             color: #ff0000; /* Rot für Fehlermeldungen */
             text-align: center;
