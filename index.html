@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalorienaufnahme nach Ten Haaf</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input, select, button {
+            margin-bottom: 20px;
+            padding: 8px;
+            font-size: 1rem;
+            width: 100%;
+        }
+        .result {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kalorienaufnahme-Berechnung nach Ten Haaf</h1>
+    <form id="calorieForm">
+        <label for="weight">Gewicht (kg):</label>
+        <input type="number" id="weight" placeholder="z. B. 70" step="0.1" required>
+
+        <label for="height">Körpergröße (m):</label>
+        <input type="number" id="height" placeholder="z. B. 1.75" step="0.01" required>
+
+        <label for="age">Alter:</label>
+        <input type="number" id="age" placeholder="z. B. 30" required>
+
+        <label for="activityFactor">Aktivitätsfaktor:</label>
+        <select id="activityFactor" required>
+            <option value="" disabled selected>Bitte wählen</option>
+            <option value="1.2">1.2 - wenig Bewegung</option>
+            <option value="1.375">1.375 - leichte Aktivität</option>
+            <option value="1.55">1.55 - moderate Aktivität</option>
+            <option value="1.6375">1.6375 - Mittelwert</option>
+            <option value="1.725">1.725 - hohe Aktivität</option>
+            <option value="1.9">1.9 - sehr hohe Aktivität</option>
+        </select>
+
+        <label for="calorieGoal">Kalorienziel:</label>
+        <select id="calorieGoal" required>
+            <option value="" disabled selected>Bitte wählen</option>
+            <option value="1">Gewicht halten (100%)</option>
+            <option value="0.8">Gewichtsabnahme - Moderates Defizit (80%)</option>
+            <option value="0.75">Gewichtsabnahme - Mittleres Defizit (75%)</option>
+            <option value="0.7">Gewichtsabnahme - Hohes Defizit (70%)</option>
+            <option value="1.05">Body Recomposition (105%)</option>
+            <option value="1.1">Muskelaufbau (110%)</option>
+        </select>
+
+        <button type="button" onclick="calculate()">Berechnen</button>
+    </form>
+
+    <div id="results" class="result"></div>
+
+    <script>
+        function calculate() {
+            // Eingabewerte abrufen
+            const weight = parseFloat(document.getElementById("weight").value);
+            const height = parseFloat(document.getElementById("height").value);
+            const age = parseInt(document.getElementById("age").value);
+            const activityFactor = parseFloat(document.getElementById("activityFactor").value);
+            const calorieGoal = parseFloat(document.getElementById("calorieGoal").value);
+
+            if (isNaN(weight) || isNaN(height) || isNaN(age) || isNaN(activityFactor) || isNaN(calorieGoal)) {
+                document.getElementById("results").textContent = "Bitte alle Felder korrekt ausfüllen.";
+                return;
+            }
+
+            // Grundumsatz berechnen
+            const basalMetabolicRate = (11.936 * weight) + (587.728 * height) - (8.129 * age) + 220.827;
+
+            // Leistungsumsatz berechnen
+            const totalEnergyExpenditure = basalMetabolicRate * activityFactor;
+
+            // Kalorienaufnahme basierend auf dem Ziel berechnen
+            const calorieIntake = totalEnergyExpenditure * calorieGoal;
+
+            // Ergebnisse anzeigen
+            document.getElementById("results").innerHTML = `
+                <p>Grundumsatz: ${basalMetabolicRate.toFixed(2)} kcal</p>
+                <p>Leistungsumsatz: ${totalEnergyExpenditure.toFixed(2)} kcal</p>
+                <p>Kalorienaufnahme (${getGoalDescription(calorieGoal)}): ${calorieIntake.toFixed(2)} kcal</p>
+            `;
+        }
+
+        function getGoalDescription(goal) {
+            switch (goal) {
+                case 1: return "Gewicht halten";
+                case 0.8: return "Gewichtsabnahme - Moderates Defizit (80%)";
+                case 0.75: return "Gewichtsabnahme - Mittleres Defizit (75%)";
+                case 0.7: return "Gewichtsabnahme - Hohes Defizit (70%)";
+                case 1.05: return "Body Recomposition (105%)";
+                case 1.1: return "Muskelaufbau (110%)";
+                default: return "unbekanntes Ziel";
+            }
+        }
+    </script>
+</body>
+</html>
