@@ -3,30 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalorienaufnahme nach Ten Haaf</title>
+    <title>Kalorienaufnahme-Berechnung nach Ten Haaf</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://via.placeholder.com/1500x1000/8c2fc2/ffffff?text=Fitness+Background'); /* Hier ein passendes Fitness-Bild einfügen */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+        header {
+            background-color: rgba(140, 47, 194, 0.9); /* Lila Grundfarbe */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.9); /* Weiß mit Transparenz */
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            color: #333;
         }
         label {
-            display: block;
-            margin-bottom: 10px;
+            font-weight: bold;
+            margin-bottom: 5px;
         }
         input, select, button {
             margin-bottom: 20px;
-            padding: 8px;
+            padding: 10px;
             font-size: 1rem;
             width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #ffc107; /* Gelb für Hervorhebung */
+            border: none;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ffca2c;
         }
         .result {
             font-weight: bold;
+            color: #8c2fc2; /* Lila Schriftfarbe */
+            text-align: center;
+        }
+        .error {
+            color: #ff0000; /* Rot für Fehlermeldungen */
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <h1>Kalorienaufnahme-Berechnung nach Ten Haaf</h1>
+    <header>
+        <h1>Kalorienaufnahme-Berechnung nach Ten Haaf</h1>
+        <p>Optimiert für Fitness- und Kraftsportler/-innen</p>
+    </header>
+
     <form id="calorieForm">
         <label for="weight">Gewicht (kg):</label>
         <input type="number" id="weight" placeholder="z. B. 70" step="0.1" required>
@@ -63,10 +109,10 @@
     </form>
 
     <div id="results" class="result"></div>
+    <div id="error" class="error"></div>
 
     <script>
         function calculate() {
-            // Eingabewerte abrufen
             const weight = parseFloat(document.getElementById("weight").value);
             const height = parseFloat(document.getElementById("height").value);
             const age = parseInt(document.getElementById("age").value);
@@ -74,25 +120,21 @@
             const calorieGoal = parseFloat(document.getElementById("calorieGoal").value);
 
             if (isNaN(weight) || isNaN(height) || isNaN(age) || isNaN(activityFactor) || isNaN(calorieGoal)) {
-                document.getElementById("results").textContent = "Bitte alle Felder korrekt ausfüllen.";
+                document.getElementById("error").textContent = "Bitte alle Felder korrekt ausfüllen.";
+                document.getElementById("results").textContent = "";
                 return;
             }
 
-            // Grundumsatz berechnen
             const basalMetabolicRate = (11.936 * weight) + (587.728 * height) - (8.129 * age) + 220.827;
-
-            // Leistungsumsatz berechnen
             const totalEnergyExpenditure = basalMetabolicRate * activityFactor;
-
-            // Kalorienaufnahme basierend auf dem Ziel berechnen
             const calorieIntake = totalEnergyExpenditure * calorieGoal;
 
-            // Ergebnisse anzeigen
             document.getElementById("results").innerHTML = `
                 <p>Grundumsatz: ${basalMetabolicRate.toFixed(2)} kcal</p>
                 <p>Leistungsumsatz: ${totalEnergyExpenditure.toFixed(2)} kcal</p>
                 <p>Kalorienaufnahme (${getGoalDescription(calorieGoal)}): ${calorieIntake.toFixed(2)} kcal</p>
             `;
+            document.getElementById("error").textContent = "";
         }
 
         function getGoalDescription(goal) {
