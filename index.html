@@ -4,7 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalorienaufnahme-Berechnung nach Ten Haaf</title>
-    <!-- Stil und andere Inhalte wie zuvor -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('fitness-hintergrund.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+        }
+
+        header {
+            background-color: rgba(140, 47, 194, 0.9);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2rem;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            color: #333;
+        }
+
+        form label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input, form select, form button {
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 1rem;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        form button {
+            background-color: #ffc107;
+            border: none;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #ffca2c;
+        }
+
+        .result {
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            font-size: 1.2rem;
+            background-color: rgba(255, 193, 7, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            display: block;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        .error {
+            color: #ff0000;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -44,10 +130,10 @@
         <select id="calorieGoal" required>
             <option value="" disabled selected>Bitte wählen</option>
             <option value="1">Gewicht halten (100%)</option>
-            <option value="0.8">Gewichtsabnahme - Moderates Defizit (80%)</option>
+            <option value="0.8">Gewichtsabnahme / Body Recomposition - Moderates Defizit (80%)</option>
             <option value="0.75">Gewichtsabnahme - Mittleres Defizit (75%)</option>
             <option value="0.7">Gewichtsabnahme - Hohes Defizit (70%)</option>
-            <option value="1.05">Muskelaufbau (105%)</option>
+            <option value="1.05">Langsamer Muskelaufbau (105%)</option>
             <option value="1.1">Muskelaufbau (110%)</option>
         </select>
 
