@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalorienaufnahme-Berechnung nach Ten Haaf</title>
+    <meta name="description" content="Berechnen Sie Ihre optimale Kalorienaufnahme mit der Ten-Haaf-Formel. Ideal für Fitness- und Kraftsportler/-innen.">
+    <meta name="keywords" content="Kalorienberechnung, Ten-Haaf-Formel, Fitness, Kraftsport, Ernährung, Kalorienbedarf">
+    <meta name="author" content=„Christ“Ian Dietrich>
+    <title>Kalorien-Rechner mit der Ten-Haaf-Formel</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -91,11 +95,23 @@
             margin-top: 10px;
         }
     </style>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Kalorien-Berechnung mit der Ten-Haaf-Formel",
+            "description": „Dein Rechner für die optimale Kalorienaufnahme mit der Ten-Haaf-Formel. Ideal für Fitness- und Kraftsportler/-innen.",
+            "author": {
+                "@type": "Person",
+                "name": „Christian Dietrich`
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Kalorienaufnahme-Berechnung nach Ten Haaf</h1>
-        <p>Optimiert für Fitness- und Kraftsportler/-innen</p>
+        <h1>Kalorien-Rechner</h1>
+        <p>Gesamtkalorien-Berechnung der Ten-Haaf-Formel für Fitness und Kraftsport</p>
     </header>
 
     <form id="calorieForm">
@@ -138,11 +154,15 @@
             <option value="1.1">Muskelaufbau (110%)</option>
         </select>
 
-        <button type="button" onclick="calculate()">Berechnen</button>
+        <button type="button" onclick="calculate()">Kalorienbedarf berechnen</button>
     </form>
 
     <div id="results" class="result"></div>
     <div id="error" class="error"></div>
+
+    <footer>
+        <p>© 2024 Christian Dietrich | <a href="/sitemap.xml">Sitemap</a> | <a href="/robots.txt">Robots.txt</a></p>
+    </footer>
 
     <script>
         function calculate() {
@@ -180,7 +200,8 @@
         function getGoalDescription(goal) {
             switch (goal) {
                 case 1: return "Gewicht halten";
-                case 0.8: return "Gewichtsabnahme / Body Recomposition - Moderates Defizit (80%)";
+                case 0.9: return "Gewichtsabnahme - Geringes Defizit (90%)";
+                case 0.8: return "Gewichtsabnahme - Moderates Defizit (80%)";
                 case 0.75: return "Gewichtsabnahme - Mittleres Defizit (75%)";
                 case 0.7: return "Gewichtsabnahme - Hohes Defizit (70%)";
                 case 1.05: return "Langsamer Muskelaufbau (105%)";
