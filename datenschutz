@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Datenschutzerklärung</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Datenschutzerklärung</h1>
+        <p><strong>1. Datenschutz auf einen Blick</strong></p>
+        <p>Diese Webseite erhebt und speichert keine personenbezogenen Daten. Sie dient ausschließlich der Bereitstellung von Informationen und Funktionen zur Kalorienberechnung.</p>
+
+        <p><strong>2. Verantwortlicher</strong></p>
+        <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist:</p>
+        <p>Christian Dietrich<br>
+        Höhenstücksweg 3a<br>
+        32683 Barntrup<br>
+        E-Mail: <a href="mailto:chrischi71@icloud.com">chrischi71@icloud.com</a></p>
+
+        <p><strong>3. Cookies und Tracking</strong></p>
+        <p>Diese Webseite verwendet keine Cookies, Tracking-Tools oder ähnliche Technologien.</p>
+
+        <p><strong>4. Externe Links</strong></p>
+        <p>Auf meiner Webseite können sich Links zu externen Websites Dritter befinden. Ich übernehme keine Haftung für den Inhalt oder die Datenschutzpraktiken dieser Seiten. Bitte informieren Sie sich direkt bei den Betreibern der jeweiligen Webseiten.</p>
+
+        <p><strong>5. Ihre Rechte</strong></p>
+        <p>Sie haben das Recht, jederzeit unentgeltlich Auskunft über die bei uns gespeicherten Daten zu erhalten, deren Herkunft und Empfänger sowie den Zweck der Datenverarbeitung. Da jedoch keine Daten erhoben oder gespeichert werden, gilt dieser Punkt nur theoretisch.</p>
+    </div>
+</body>
+</html>
