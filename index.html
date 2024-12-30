@@ -10,49 +10,50 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('griechischer-athlet-und athletinnen-gottheiten-die fitnessuebungen-mit-fitnessgeraeten-machen.png');
+            background-image: url('A_heroic_and_artistic_scene_featuring_a_Greek-Roma.png'); /* Verwende das erstellte Bild */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            color: #ffffff;
+            color: #f5f5f5; /* Helle Schriftfarbe für Kontrast */
         }
 
         header {
-            background-color: rgba(33, 37, 41, 0.9);
+            background-color: rgba(15, 15, 80, 0.9); /* Dunkles Ultramarin */
             padding: 20px;
             text-align: center;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
-            color: #0073e6;
+            font-size: 2.8rem;
+            color: #ffd700; /* Goldene Schrift */
         }
 
         header p {
             margin: 5px 0 0;
-            font-size: 1.2rem;
-            color: #cccccc;
+            font-size: 1.3rem;
+            color: #c0c0c0; /* Silberne Akzente */
         }
 
         form {
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(15, 15, 80, 0.85); /* Ultramarin mit Transparenz */
             margin: 40px auto;
             padding: 20px;
             border-radius: 10px;
             max-width: 500px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            color: #333333;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+            color: #f5f5f5;
         }
 
         form label {
             font-weight: bold;
             display: block;
             margin-bottom: 5px;
+            color: #ffd700; /* Goldene Schrift */
         }
 
         form input, form select, form button {
@@ -61,38 +62,44 @@
             font-size: 1rem;
             width: 100%;
             border-radius: 5px;
-            border: 1px solid #ddd;
+            border: 1px solid #ffd700; /* Goldene Umrandung */
             box-sizing: border-box;
         }
 
+        form input, form select {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #0f0f50; /* Dunkles Ultramarin */
+        }
+
         form button {
-            background-color: #0073e6;
+            background-color: #ffd700; /* Goldener Button */
             border: none;
-            color: #ffffff;
+            color: #0f0f50; /* Dunkles Ultramarin */
             font-weight: bold;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
         form button:hover {
-            background-color: #005bb5;
+            background-color: #ffc107; /* Helleres Gold */
         }
 
         .result {
             font-weight: bold;
-            color: #333333;
+            color: #f5f5f5;
             text-align: center;
             font-size: 1.2rem;
-            background-color: rgba(0, 115, 230, 0.8);
+            background-color: rgba(15, 15, 80, 0.85);
             padding: 20px;
             border-radius: 10px;
             display: block;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
             max-width: 500px;
             margin: 20px auto;
         }
 
         .error {
-            color: #ff0000;
+            color: #ff6347; /* Rotes Highlight für Fehler */
             text-align: center;
             margin-top: 10px;
         }
@@ -100,11 +107,14 @@
         footer {
             text-align: center;
             margin-top: 20px;
-            color: #cccccc;
+            color: #f5f5f5;
+            background-color: rgba(15, 15, 80, 0.9);
+            padding: 10px;
+            box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.5);
         }
 
         footer a {
-            color: #0073e6;
+            color: #ffd700; /* Goldene Links */
             text-decoration: none;
             margin: 0 5px;
         }
@@ -113,18 +123,6 @@
             text-decoration: underline;
         }
     </style>
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "Kalorien-Berechnung mit der Ten-Haaf-Formel",
-            "description": "Dein Rechner für die optimale Kalorienaufnahme mit der Ten-Haaf-Formel. Ideal für Fitness- und Kraftsportler/-innen.",
-            "author": {
-                "@type": "Person",
-                "name": "Christian Dietrich"
-            }
-        }
-    </script>
 </head>
 <body>
     <header>
@@ -230,3 +228,4 @@
     </script>
 </body>
 </html>
+
