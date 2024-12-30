@@ -5,53 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Berechne deine optimale Kalorienaufnahme mit der Ten-Haaf-Formel. Ideal für Fitness- und Kraftsportler/-innen.">
     <meta name="keywords" content="Kalorienberechnung, Ten-Haaf-Formel, Fitness, Kraftsport, Ernährung, Kalorienbedarf">
-    <meta name="author" content="Christian Dietrich">
+    <meta name="author" content=„Christian Dietrich“>
     <title>Kalorien-Rechner mit der Ten-Haaf-Formel</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Josefin Sans', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('metropolis-hintergrund-fitness.png');
+            background-image: url('fitness-hintergrund.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            background-repeat: no-repeat;
-            color: #f4e7c5; /* Beiger Farbton */
-            position: relative;
+            color: #fff;
         }
 
         header {
-            background-color: rgba(10, 10, 10, 0.7); /* Transparenteres dunkles Grau */
+            background-color: rgba(140, 47, 194, 0.9);
             padding: 20px;
             text-align: center;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         header h1 {
             margin: 0;
-            font-size: 3rem;
-            color: #f4e7c5; /* Beigefarbene Schrift */
-            text-transform: uppercase;
-            letter-spacing: 3px;
+            font-size: 2.5rem;
         }
 
         header p {
             margin: 5px 0 0;
-            font-size: 1.3rem;
-            color: #bbbbbb; /* Helleres Grau */
+            font-size: 1.2rem;
         }
 
         form {
-            background-color: rgba(30, 30, 30, 0.8); /* Transparenteres Dunkelgrau */
+            background-color: rgba(255, 255, 255, 0.9);
             margin: 40px auto;
             padding: 20px;
             border-radius: 10px;
             max-width: 500px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
-            color: #f4e7c5; /* Beige */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            color: #333;
         }
 
         form label {
@@ -66,58 +59,40 @@
             font-size: 1rem;
             width: 100%;
             border-radius: 5px;
-            border: 1px solid #555555; /* Mittleres Grau */
+            border: 1px solid #ddd;
             box-sizing: border-box;
-            background-color: #1e1e1e; /* Sehr dunkles Grau */
-            color: #f4e7c5; /* Beige */
         }
 
         form button {
-            background-color: #333333; /* Mittleres Grau */
+            background-color: #ffc107;
             border: none;
-            color: #f4e7c5; /* Beige */
+            color: #333;
             font-weight: bold;
             cursor: pointer;
         }
 
         form button:hover {
-            background-color: #555555; /* Helleres Grau */
+            background-color: #ffca2c;
         }
 
         .result {
             font-weight: bold;
-            color: #f4e7c5; /* Beige */
+            color: #333;
             text-align: center;
             font-size: 1.2rem;
-            background-color: rgba(50, 50, 50, 0.8); /* Transparenteres Dunkleres Grau */
+            background-color: rgba(255, 193, 7, 0.8);
             padding: 20px;
             border-radius: 10px;
             display: block;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
             max-width: 500px;
             margin: 20px auto;
         }
 
         .error {
-            color: #ff4c4c; /* Rot für Fehler */
+            color: #ff0000;
             text-align: center;
             margin-top: 10px;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            color: #bbbbbb; /* Helleres Grau */
-        }
-
-        footer a {
-            color: #f4e7c5; /* Beige */
-            text-decoration: none;
-            margin: 0 5px;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
         }
     </style>
     <script type="application/ld+json">
@@ -125,10 +100,10 @@
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "Kalorien-Berechnung mit der Ten-Haaf-Formel",
-            "description": "Dein Rechner für die optimale Kalorienaufnahme mit der Ten-Haaf-Formel. Ideal für Fitness- und Kraftsportler/-innen.",
+            "description": „Dein Rechner für die optimale Kalorienaufnahme mit der Ten-Haaf-Formel. Ideal für Fitness- und Kraftsportler/-innen.",
             "author": {
                 "@type": "Person",
-                "name": "Christian Dietrich"
+                "name": „Christian Dietrich`
             }
         }
     </script>
@@ -186,7 +161,7 @@
     <div id="error" class="error"></div>
 
     <footer>
-        <p>&copy; 2024 Christian Dietrich</p>
+        <p>© 2024 Christian Dietrich | <a href="/sitemap.xml">Sitemap</a> | <a href="/robots.txt">Robots.txt</a></p>
     </footer>
 
     <script>
